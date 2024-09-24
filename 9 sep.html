@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    </style>
+</head>
+<body>
+    <!-- <button class="Show"> Show date</button> 
+        <h2 class="display"></h2>-->
+    <script>
+        /* console.log(Math.abs(-7));
+        console.log(Math.ceil(4.2));
+        console.log(Math.floor(4.7));
+        console.log(Math.min(4.2,12,2,3,55,76));
+        console.log(Math.max(12,4,5,533,8,56));
+        let end=5;
+        let start=7;
+        console.log(Math.random());
+        console.log(Math.floor(Math.random()*10));
+        console.log(Math.floor(Math.random()*(end-start+1)+start)); */
+         var d=new Date();
+        document.write("<b>Locale String:</b>" + d.toLocaleString()+"<br>");
+        document.write("<b>Full Month:</b>" + d.toLocaleString('default',{month:'long'})+"<br>");
+        document.write("<b>Weekday Name:</b>" + d.toLocaleString('default',{weekday:'long'})+"<br>");
+        document.write("<b>Hours:</b>" + d.getHours()+"<br>");
+        document.write("<b>Day:</b>" + d.getDay()+"<br>");
+        mnt=d.getMonth()+1;
+        document.write("<b>Month:</b>" + mnt+"<br>");
+        document.write("<b>Full Year:</b>" + d.getFullYear()+"<br>");
+        document.write("<b>Minutes:</b>" + d.getMinutes()+"<br>");
+        document.write("<b>Seconds:</b>" + d.getSeconds()+"<br>");
+        /* var d=new Date();
+        document.write("<b></b>" + d.toLocaleString('default',{weekday:'long'}));
+        document.write("<b> , </b>" + d.getMonth());
+        document.write("<b></b>" + d.toLocaleString('default',{month:'long'}));
+        document.write("<b> , </b>" + d.getFullYear()+"<br>");*/
+        /*var text="hello,let's do the coding!";
+        var newText="";
+        for(i=0;i<text.length;i++){
+            if(i==0){
+                newText+=text[i].toUpperCase();
+            }
+        else{
+            newText+=text[i];
+    if(text[i]=="")
+        }
+
+        }
+        document.write("<b>newText:<b>"+ text.toUpperCase());
+        var num=1234567;*/
+    </script> 
+</body>
+</html>

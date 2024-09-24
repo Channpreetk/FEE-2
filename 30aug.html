@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=200.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="download.jpeg" id="img1" height="100" width="100"><br>
+    <button onclick="zoomin()">Zoomin</button> &nbsp; <button>Zoomout</button>
+    <script>
+        function zoomin(){
+            let a=document.getElementById("img1").clientWidth;
+            let b=document.getElementById("img1").clientHeight;
+            console.log("width:",a);
+            console.log("height:",b);
+        }
+    </script>
+</body>
+</html>

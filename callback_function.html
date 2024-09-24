@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <p id="jsondata"></p>
+    <!-- <form  name="loginform" action="Calculator.html" onsubmit="return validate()"> 
+        Username:<input type="text" name="uname"><br>
+        Password:<input type="password" name="pwd"><br>
+        <input type="submit" value="SUBMIT">
+    </form>-->
+    <form name="form1" method="get" onsubmit="return saveform()">
+        Username:<input type="text" name="uname" id="uname"><br>
+        Password:<input type="password" name="pwd1" id="pwd1"><br>
+       Retype Password:<input type="password" name="pwd2" id="pwd2"><br>
+        <input type="submit" value="SUBMIT">
+        <br><br>
+        <div id="aftersave">
+            <h2 id="saveinfo">Registered Successfully</h2>
+            <a href="contact.html">Login here</a>
+        </div>
+    </form>
+    <script type="text/javascript" language="javascript">
+        /* Callback function
+        function greet(name,callback){
+            console.log('Hello' +' '+name);
+            callback();
+        }
+        function callMe(){
+            console.log('It is a callback function');
+        }
+        greet('Mam',callMe);*/
+
+        //Map function
+        /*var myArray=[1,2,3,4,5];
+        var dbArray=myArray.map(double);
+        document.write(`${dbArray}`);
+        function double(n){
+            return n*2;
+        }*/
+        /*let name="CHITKARA";
+        let nameArray=name.split(' ');
+        let newArray=nameArray.map(add1);
+        console.log(newArray);
+        function add1(str){
+            return st +'1';
+        }*/
+
+
+        /* Filter function
+        var myArray=[1,2,3,4,5];
+        var oddArray=myArray.filter(odd);
+        document.write(`${oddArray}`);
+        function odd(n){
+            if(n%2!=0)
+            return n*2;
+        }*/
+
+        //Reduce function
+        /*var myArray=[1,2,3,4,5];
+        var sum=myArray.reduce(add,0);
+        document.write(`${sum}`);
+        function add(n,cur){
+            return n+cur;
+        }*/
+        /*var myArray=[1,2,3,4,5];
+        var mul=myArray.reduce(mul,1);
+        document.write(`${mul}`);
+        function mul(n,cur){
+            return n*cur;
+        }*/
+        
+        //ES6-Arrow function
+        /*let add=(x,y)=>x+y;
+        console.log(add(10,20));*/
+        /*let numbers=[4,2,6,12,3];
+        numbers.sort((a,b)=>b-a);
+        console.log(numbers);*/
+
+        //ARRAY FUNCTION TO CHECK LENGTH
+        /* let names=["Krishna","Ram","Maruti"];
+         lengths=names.map(name=> name.length);
+         console.log(lengths);*/
+
+        /*const arrayaverage=(arr)=>{
+            let total=0;
+            for(let number of arr){
+                total+=number;
+            }
+            return total/arr.length;
+        }
+        let numbers=[1,2,3,,4,5,6,7];
+        console.log(`Average is:${arrayaverage(numbers)}`);*/
+
+       /*
+        import mydata from './data.json' with {type:"json"};
+        document.getElementById("jsondata").innerHTML=JSON.stringify(mydata);*/
+        
+        /*localStorage.user=JSON.stringify({name:"Chann",password:"12345"});
+        let user =JSON.parse(localStorage.user);
+        function validate(){
+            let u=document.loginform.uname.value;
+            let p=document.loginform.pwd.value;
+            if(u==user.name && p==user.password)
+                return true;
+            else{
+                return false;
+            }
+        }*/
+       function saveform(){
+        un=document.getElementById("uname").value;
+        pw=document.getElementById("pwd1").value;
+        localStorage.users=JSON.stringify({username:un,password:pw});
+        document.getElementById("aftersave").style.display="block";
+        return false;
+       }
+        </script>
+</body>
+</html>

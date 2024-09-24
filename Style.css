@@ -1,0 +1,31 @@
+body{
+    /*background-color: beige;*/
+   /* background-image: url("download.jpeg");*/
+    background-repeat: no-repeat;
+    background-size:cover;
+    /*background-image: linear-gradient(skyblue,beige);*/
+    background-position: center;
+}
+h1{
+    color:black;
+    margin-left: 30px; /*Single line comment*/
+    font-family: 'Courier New', Courier, monospace;
+    width: 10%;
+    height: 250px;
+    padding:12px;
+    margin:12px;
+    /*border:5px solid blue;*/
+    border-radius: 25px;
+    border: none;
+    border-bottom: 3px solid blue;
+    border-left: 3px solid red;
+    background-color: cadetblue;
+    transition: width 10s ease-in-out;
+    border-style: dotted;
+    border-color:black;
+    box-shadow: 10px 10px cyan;
+}
+P{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(0,220,98);
+}

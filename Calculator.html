@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+    table {
+      height: 350px;
+      width: 300px;
+      border: 5px solid black;
+      border-radius: 6px;
+      background-color: black;
+    }
+    td {
+      border: 3px solid black;
+      border-radius: 10px;
+      color: white;
+      background-color: grey;
+      text-align: center;
+      vertical-align: middle;
+      padding: 10px;
+    }
+    #fxn {
+      background-color: darkgrey;
+      color: black;
+    }
+    #result {
+      background-color: white;
+      color: black;
+      text-align: right;
+      font-size: 24px;
+      padding-right: 10px;
+    }
+  </style>
+
+
+</head>
+<body>
+  <div id="hide">
+    <input type="radio" name="view" id="view" onclick="viewcal()"> show
+    <input type="radio" name="view" id="hide_cal" onclick="hidecal()" >hide
+  </div>
+  <div id="calculator">
+    <table>
+      <tr>
+        <td colspan="3" id="result"></td>
+        <td id="fxn" style="background-color: yellow;" onclick="clearDisplay()">Clear</td>
+      </tr>
+      <tr>
+        <td onclick="displayValue('7')">7</td>
+        <td onclick="displayValue('8')">8</td>
+        <td onclick="displayValue('9')">9</td>
+        <td id="fxn" onclick="displayValue('/')">/</td>
+      </tr>
+      <tr>
+        <td onclick="displayValue('4')">4</td>
+        <td onclick="displayValue('5')">5</td>
+        <td onclick="displayValue('6')">6</td>
+        <td id="fxn" onclick="displayValue('X')">X</td>
+      </tr>
+      <tr>
+        <td onclick="displayValue('1')">1</td>
+        <td onclick="displayValue('2')">2</td>
+        <td onclick="displayValue('3')">3</td>
+        <td id="fxn" onclick="displayValue('-')">-</td>
+      </tr>
+      <tr>
+        <td onclick="displayValue('0')">0</td>
+        <td onclick="displayValue('.')">.</td>
+        <td id="fxn" style="background-color: lightgray;" onclick="calculate()">=</td>
+        <td id="fxn" onclick="displayValue('+')">+</td>
+      </tr>
+    </table>
+  </div>
+  <script>
+function viewcal() 
+      {
+        document.getElementById("calculator").style.display = "block"; 
+      }
+      function hidecal() 
+      {
+        document.getElementById("calculator").style.display = "none";
+      }
+    let expression = '';
+    function displayValue(value) {
+      const resultField = document.getElementById("result");
+      
+      if (expression === "0" && value !== ".") {
+        expression = value;
+      } else {
+        expression += value;
+      }
+      resultField.innerHTML = expression;
+    }
+    function clearDisplay() {
+      expression = '';
+      document.getElementById("result").innerHTML = " ";
+    }
+    function calculate() {
+      temp='';
+      for (i=0;i<expression.length;i++)
+    {
+      if (expression[i]=='X')
+      {
+        temp += '*';
+      }
+      else
+      {
+        temp+=expression[i];
+      }
+    }
+        expression = eval(temp);
+        document.getElementById("result").innerHTML = expression;
+      }
+  </script>
+  
+</body>
+</html>

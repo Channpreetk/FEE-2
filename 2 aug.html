@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <style>
+        body{
+            font-size: 22px;
+        }
+        i:nth-child(n){
+            color: red;
+        }
+    </style>-->
+    <title>Document</title>
+</head>
+<body align="center">
+    <!--<h1 id="my"></h1>
+    <script>
+        str1="hiii";
+        document.getElementById("my").innerHTML=str1;
+    </script>-->
+    <!--<h1 id="even"></h1>
+    <h1 id="odd"></h1>
+    <script>
+    var num1=parseInt(prompt("enter the number: "));
+    if(num1%2==0){
+    str1="Number is even";
+    document.getElementById("even").innerHTML=str1;}
+    else{
+    str2="Number is odd";
+    document.getElementById("odd").innerHTML=str2;}
+    </script>-->
+    <!--<script>
+        var i=1;
+        while(i<=20){
+            document.write("<style='color" + i  + "");document.write("<h1>" + i  + "</h1>");
+            i++;
+            i++;
+        }
+    </script>-->
+    <!-- <script> 
+        var i=1;
+        sum=0;
+        while(i<=20){
+            if(i%2!=0){
+                sum+=i;
+                document.write("<h1>" + i  + "</h1>");
+            }
+            i++;
+        }
+        document.write("Sum of ODD is"+ sum );
+    </script>-->
+    <!-- <script> 
+    var num1 = parseInt(prompt("Enter a number:"));
+    for(var i=1;i<=10;i++)
+{
+    document.write(` ${num1} x ${i} = ${num1 * i} <br>`);
+}  </script>-->
+<!-- <script> 
+  for (let i = 1; i < 31; i++) 
+    {
+        if (i%3==0)
+    {
+        document.write(`${i} is a multiple of ${3}!<br>`); 
+    }
+    if ((i%3==0) && (i%5==0))
+    {
+        document.write(`${i} is a multiple of both ${3} and ${5}!<br>`);
+    }
+    else  if (i%5==0)
+    {
+        document.write(`${i} is a multiple of ${5}!<br>`); 
+    }}
+    </script>-->
+    <script>
+    let rows = parseInt(prompt("Enter the number of rows:"));
+    let cols = parseInt(prompt("Enter the number of columns:"));
+    let table = document.createElement('table');
+    table.border = 1;
+    let counter = 1;
+    for (let i = 0; i < rows; i++) {
+    let row = table.insertRow(i);
+    for (let j = 0; j < cols; j++) {
+        let cell = row.insertCell(j);
+        cell.innerHTML = counter;
+        cell.style.width = '300px'; 
+        cell.style.padding = '10px';
+        counter++;
+    }}
+    document.body.appendChild(table);
+    </script>
+</body>
+</html>

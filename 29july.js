@@ -1,0 +1,1 @@
+document.write("This text is coming from External JS file.<br>");

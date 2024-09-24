@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <style>
+    input {
+      transition: width 1s ease-in-out;
+      width: 20%;
+      margin: 8px;
+      border: 2px solid blue;
+      background-color: cyan;
+      color: blue;
+    }
+    input[type="text"]:focus {
+      transition: width 1s ease-in-out;
+      width: 40%;
+      background-color: yellow;
+    }
+  </style>
+  <body>
+    <form action="">
+      <label for="">First Name: &nbsp;</label>
+      <input type="text" />
+      <br />
+      <label for="">Last Name: &nbsp;</label>
+      <input type="text" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1">Click here</button>
+    <script>
+        /*function myfunc(){
+            alert ("Welcome User!")
+        }
+        document.getElementById("btn1").addEventListener("click",myfunc)*/
+        /*document.getElementById("btn1").addEventListener("click",function(){
+            alert("Hello!")
+        })*/
+        document.getElementById("btn1").addEventListener("click",function(){
+            var d=new Date();
+            alert(d.toLocaleString('default',{month:'long'})+" "+ d.getDate() +"," + d.getFullYear())
+        })
+    </script>
+</body>
+</html>

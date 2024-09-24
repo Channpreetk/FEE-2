@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script type="module"> 
+        import mydata from './data1.json' with {type:"json"};
+        var user_check=' ';
+        for(const u of mydata){
+            console.log(u.username,u.password);
+            if(u.usernamw=="Chann" && u.password=="12345"){
+                user_check="found";
+                break;
+            }
+            else
+            user_check="Not found";
+        }
+        if(user_check=="found")
+        document.getElementById("text").innerText="Login successful";
+    else
+    document.getElementById("text").innerText="Login Failed";
+    </script>-->
+    <script>
+        /*const title='Java script is wonderful';
+        console.log(title.startsWith('script')); //false
+        console.log(title.startsWith('Java')); //true
+        console.log(title.endsWith('script')); //false
+        console.log(title.endsWith('wonderful')); //true
+        str="Hello";
+        new_str=str.repeat(3);
+        console.log(new_str);//HelloHelloHello
+        let colors=['Red','Green','yellow'];
+        for(const [index,color]of colors.entries()){
+            console.log(`${color} is at index ${index}`);
+        }*/
+        /*Output;
+        Red is at index 0
+        Green is at index 1
+        Yellow is at index 2*/
+
+       /* let data=true;
+        let mypromise=new Promise(function(resolve,reject){
+            if(data){
+                resolve("data loaded successfully");
+            }
+            else{
+                reject("Data not loaded....Some error occured");
+            }
+        });
+        console.log(mypromise);*/
+
+        let mypromise=new Promise(function(resolve,reject){
+            const x="bulleye";
+            const y="bulleye";
+            if(x==y){
+                resolve();
+            } else {
+                reject();
+            }
+        });
+        mypromise.
+        then(function(){
+            console.log('!successful');
+        }).
+        catch(function(){
+            console.log('Some error occured');
+        });
+
+        const data=true;
+        let promise=new Promise(function(resolve,reject){
+            if(data){
+                resolve("Fulfilled");
+            }
+            else{
+                reject("Rejected");
+            }
+        })
+        promise
+        .then(function(successmessage){
+            console.log(successmessage); //transfers control to resolve method
+        })
+        .then(function(){
+            console.log("success"); //also runs if promise is fulfilled
+        })
+        .catch(function(errormessage){
+            console.log(errormessage); //transfers control to reject method 
+        });
+
+        
+    </script>
+</body>
+</html>

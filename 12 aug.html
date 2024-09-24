@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shape and Color Changer</title>
+    <style>
+        #shape {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            margin: 20px auto;
+            transition: all 0.3s ease;
+        }
+
+        .circle {
+            border-radius: 50%;
+        }
+
+        .rectangle {
+            width: 150px;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="shape"></div>
+
+    <div style="text-align: center;">
+        <button onclick="changeShape('circle')">Circle</button>
+        <button onclick="changeShape('square')">Square</button>
+        <button onclick="changeShape('rectangle')">Rectangle</button>
+        <button onclick="changeColor('yellow')">Fill Yellow</button>
+        <button onclick="changeColor('none')">Fill None</button>
+    </div>
+
+    <script>
+        function changeShape(shape) {
+            const shapeDiv = document.getElementById('shape');
+            shapeDiv.className = ''; // Reset the shape to default
+            if (shape === 'circle') {
+                shapeDiv.classList.add('circle');
+            } else if (shape === 'rectangle') {
+                shapeDiv.classList.add('rectangle');
+            }
+        }
+
+        function changeColor(color) {
+            const shapeDiv = document.getElementById('shape');
+            if (color === 'none') {
+                shapeDiv.style.backgroundColor = 'transparent';
+                shapeDiv.style.border = '2px solid black'; // Add border when no fill
+            } else {
+                shapeDiv.style.backgroundColor = color;
+                shapeDiv.style.border = 'none'; // Remove border when filled
+            }
+        }
+    </script>
+
+</body>
+</html>

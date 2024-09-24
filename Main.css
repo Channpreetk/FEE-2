@@ -1,0 +1,21 @@
+body:hover{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    color: black;
+    background: white;
+    margin:18px;
+}
+h1{
+    font-size: 20px;
+    margin-top: 0%;
+    margin-bottom: 15px;
+    border-bottom: 2px solid black;
+    text-shadow: 5px 3px 7px cyan;
+    
+}
+.Main{
+    background: lightblue;
+}
+li:nth-child(2n+1){
+    color: red;
+}
